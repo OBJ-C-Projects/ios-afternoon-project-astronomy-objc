@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		0435285D247E73CF00A55C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435285C247E73CF00A55C3F /* AppDelegate.swift */; };
 		0435285F247E73CF00A55C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435285E247E73CF00A55C3F /* SceneDelegate.swift */; };
-		04352861247E73CF00A55C3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04352860247E73CF00A55C3F /* ViewController.swift */; };
+		04352861247E73CF00A55C3F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04352860247E73CF00A55C3F /* DetailViewController.swift */; };
 		04352864247E73CF00A55C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04352862247E73CF00A55C3F /* Main.storyboard */; };
 		04352866247E73D400A55C3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04352865247E73D400A55C3F /* Assets.xcassets */; };
 		04352869247E73D400A55C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04352867247E73D400A55C3F /* LaunchScreen.storyboard */; };
+		04352874247E8F2D00A55C3F /* AstronomyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04352873247E8F2D00A55C3F /* AstronomyCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04352859247E73CF00A55C3F /* Astronomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astronomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0435285C247E73CF00A55C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0435285E247E73CF00A55C3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04352860247E73CF00A55C3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04352860247E73CF00A55C3F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		04352863247E73CF00A55C3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04352865247E73D400A55C3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04352868247E73D400A55C3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0435286A247E73D400A55C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04352873247E8F2D00A55C3F /* AstronomyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,8 @@
 		04352870247E74A900A55C3F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04352860247E73CF00A55C3F /* ViewController.swift */,
+				04352860247E73CF00A55C3F /* DetailViewController.swift */,
+				04352873247E8F2D00A55C3F /* AstronomyCollectionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -162,7 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04352861247E73CF00A55C3F /* ViewController.swift in Sources */,
+				04352861247E73CF00A55C3F /* DetailViewController.swift in Sources */,
+				04352874247E8F2D00A55C3F /* AstronomyCollectionViewController.swift in Sources */,
 				0435285D247E73CF00A55C3F /* AppDelegate.swift in Sources */,
 				0435285F247E73CF00A55C3F /* SceneDelegate.swift in Sources */,
 			);
