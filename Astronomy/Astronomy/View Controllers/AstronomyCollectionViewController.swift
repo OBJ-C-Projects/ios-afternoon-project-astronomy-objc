@@ -12,12 +12,17 @@ private let reuseIdentifier = "AstronomyCell"
 
 class AstronomyCollectionViewController: UICollectionViewController {
     
+    //MARK: - Properties
+    private var network = Network()
+    
+    
+    
     @IBOutlet weak var imageView: UIImageView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      network.fetchPlanetsData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

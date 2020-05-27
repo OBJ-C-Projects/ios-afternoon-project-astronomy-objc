@@ -12,6 +12,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//Rename for swift acces 
+NS_SWIFT_NAME(Network)
 @interface FGTNetwork : NSObject
 
 //Methods

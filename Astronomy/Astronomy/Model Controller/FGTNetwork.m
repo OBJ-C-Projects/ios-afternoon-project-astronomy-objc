@@ -11,19 +11,15 @@
 
 @implementation FGTNetwork
 
-//NasaKey: jrVEkWbxdUnM3zWk4ekDYlmvsyqQYOjEP4KCgsQn
-//base url: https://api.nasa.gov/planetary/apod?api_key=jrVEkWbxdUnM3zWk4ekDYlmvsyqQYOjEP4KCgsQn
-
-
 - (void) fetchPlanetsData{
     
     //1.Build URL
-    NSString *baseURL = @"https://api.nasa.gov/planetary/apod?api";
+    NSString *baseURL = @"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000";
     NSString *keyValue = @"jrVEkWbxdUnM3zWk4ekDYlmvsyqQYOjEP4KCgsQn";
     NSURLComponents *components = [NSURLComponents  componentsWithString:baseURL];
     
     //Create query items
-    NSURLQueryItem *key = [NSURLQueryItem queryItemWithName:@"key" value:keyValue];
+    NSURLQueryItem *key = [NSURLQueryItem queryItemWithName:@"api_key" value:keyValue];
     
     //Add query items to array
     components.queryItems = @[key];
@@ -44,8 +40,10 @@
             return;
         }
         
+        NSLog(@"Finished fetching data");
         //JSON parsing
-        
+        NSString *dummyData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"Data: %@",dummyData);
         
         
     }]resume];

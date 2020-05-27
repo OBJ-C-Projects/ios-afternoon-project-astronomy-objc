@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     //MARK: - Properties
-    
+    //private var network = Network()
     
     //MARK: - Outlets
     
@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //network.fetchPlanetsData()
     }
     
     //MARK: - Actions
