@@ -40,6 +40,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOr-1f-kvm">
                                                 <rect key="frame" x="133.5" y="57" width="147" height="30"/>
                                                 <state key="normal" title="Save to Photo Library"/>
+                                                <connections>
+                                                    <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GLH-ii-cFp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -61,6 +64,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ghT-WT-Ufu"/>
+                    <connections>
+                        <outlet property="cameraDetailLabel" destination="IEl-fc-tLu" id="sCy-Gg-g1W"/>
+                        <outlet property="dateLabel" destination="pcy-5h-z55" id="gOF-5Q-mk1"/>
+                        <outlet property="imageView" destination="L7u-tJ-Jl4" id="zwF-KV-VRO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,12 +89,13 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BUF-UN-SqD">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AstronomyCell" id="BUF-UN-SqD">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oEj-5t-5ot">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.31276117840000001" green="1" blue="0.062551888750000006" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 </collectionViewCellContentView>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="dnb-HR-QNS"/>
