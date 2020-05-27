@@ -14,12 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FGTNetwork : NSObject
 
-//Properties
-@property (nonatomic) NSURL *baseURL;
-
-- (instancetype)initWithBaseURL: (NSURL *) baseURL;
-
-
 //Methods
 - (void) fetchPlanetsData;
 
