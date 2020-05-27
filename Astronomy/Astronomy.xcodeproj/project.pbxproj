@@ -56,15 +56,39 @@
 		0435285B247E73CF00A55C3F /* Astronomy */ = {
 			isa = PBXGroup;
 			children = (
+				04352870247E74A900A55C3F /* View Controllers */,
+				04352871247E74B700A55C3F /* Storyboards */,
+				04352872247E74C200A55C3F /* Resources */,
+			);
+			path = Astronomy;
+			sourceTree = "<group>";
+		};
+		04352870247E74A900A55C3F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04352860247E73CF00A55C3F /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		04352871247E74B700A55C3F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04352862247E73CF00A55C3F /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		04352872247E74C200A55C3F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				0435285C247E73CF00A55C3F /* AppDelegate.swift */,
 				0435285E247E73CF00A55C3F /* SceneDelegate.swift */,
-				04352860247E73CF00A55C3F /* ViewController.swift */,
-				04352862247E73CF00A55C3F /* Main.storyboard */,
 				04352865247E73D400A55C3F /* Assets.xcassets */,
 				04352867247E73D400A55C3F /* LaunchScreen.storyboard */,
 				0435286A247E73D400A55C3F /* Info.plist */,
 			);
-			path = Astronomy;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3P8URX7UV;
-				INFOPLIST_FILE = Astronomy/Info.plist;
+				INFOPLIST_FILE = Astronomy/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3P8URX7UV;
-				INFOPLIST_FILE = Astronomy/Info.plist;
+				INFOPLIST_FILE = Astronomy/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
