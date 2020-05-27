@@ -15,9 +15,9 @@ class DetailViewController: UIViewController {
     
     //MARK: - Outlets
     
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var cameraDetailLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var cameraDetailLabel: UILabel!
     
 
     override func viewDidLoad() {

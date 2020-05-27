@@ -98,7 +98,7 @@
                                     <color key="backgroundColor" red="0.31276117840000001" green="1" blue="0.062551888750000006" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 </collectionViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="dnb-HR-QNS"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="detailViewSegue" id="IDG-p3-1qU"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
