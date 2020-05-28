@@ -14,15 +14,16 @@
 - (void) fetchPlanetsData{
     
     //1.Build URL
-    NSString *baseURL = @"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000";
+    NSString *baseURL = @"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos";
     NSString *keyValue = @"jrVEkWbxdUnM3zWk4ekDYlmvsyqQYOjEP4KCgsQn";
     NSURLComponents *components = [NSURLComponents  componentsWithString:baseURL];
     
     //Create query items
     NSURLQueryItem *key = [NSURLQueryItem queryItemWithName:@"api_key" value:keyValue];
     
+    NSURLQueryItem *sol = [NSURLQueryItem queryItemWithName:@"sol" value:@"1000"];
     //Add query items to array
-    components.queryItems = @[key];
+    components.queryItems = @[sol,key];
     
     //Complete∫ URL
     NSURL *url = components.URL;
