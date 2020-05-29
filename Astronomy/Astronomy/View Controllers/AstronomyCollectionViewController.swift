@@ -22,9 +22,11 @@ class AstronomyCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      network.fetchPlanetsData()
+        network.fetchPlanetsData("") { (planet, error) in
+            print("Completion triggered!")
+        }
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        // self.clearsSeiklectionOnViewWillAppear = false
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)

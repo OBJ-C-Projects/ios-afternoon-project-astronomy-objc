@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-
+@class Planet;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,8 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(Network)
 @interface FGTNetwork : NSObject
 
+//properties
+@property (nonatomic, readonly) NSArray<Planet *> *planets;
+
+
 //Methods
-- (void) fetchPlanetsData;
+- (void) fetchPlanetsData:(NSString *)rover completion:(void (^)(Planet *planet, NSError *error))completion;
 
 @end
 
