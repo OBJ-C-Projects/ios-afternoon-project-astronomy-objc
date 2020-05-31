@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		040AED182483B7CF00B1125C /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AED172483B7CF00B1125C /* PlanetCollectionViewCell.swift */; };
-		040AED1A2483ED8600B1125C /* FetchPhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AED192483ED8600B1125C /* FetchPhotoOperation.swift */; };
 		040AED1D2483EF5300B1125C /* URL+Secure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AED1C2483EF5300B1125C /* URL+Secure.swift */; };
 		0435285D247E73CF00A55C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435285C247E73CF00A55C3F /* AppDelegate.swift */; };
 		0435285F247E73CF00A55C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435285E247E73CF00A55C3F /* SceneDelegate.swift */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		040AED172483B7CF00B1125C /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
-		040AED192483ED8600B1125C /* FetchPhotoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotoOperation.swift; sourceTree = "<group>"; };
 		040AED1C2483EF5300B1125C /* URL+Secure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Secure.swift"; sourceTree = "<group>"; };
 		04352859247E73CF00A55C3F /* Astronomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astronomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0435285C247E73CF00A55C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,14 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		040AED1B2483ED8900B1125C /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				040AED192483ED8600B1125C /* FetchPhotoOperation.swift */,
-			);
-			path = Operations;
-			sourceTree = "<group>";
-		};
 		040AED1E2483EF5C00B1125C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +82,6 @@
 				04352877247EA5BA00A55C3F /* Model */,
 				0435287C247EA73800A55C3F /* Model Controller */,
 				04352878247EA72E00A55C3F /* Astronomy-Bridging-Header.h */,
-				040AED1B2483ED8900B1125C /* Operations */,
 				040AED1E2483EF5C00B1125C /* Utilities */,
 			);
 			path = Astronomy;
@@ -218,7 +207,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04352861247E73CF00A55C3F /* DetailViewController.swift in Sources */,
-				040AED1A2483ED8600B1125C /* FetchPhotoOperation.swift in Sources */,
 				04352874247E8F2D00A55C3F /* AstronomyCollectionViewController.swift in Sources */,
 				040AED1D2483EF5300B1125C /* URL+Secure.swift in Sources */,
 				0435285D247E73CF00A55C3F /* AppDelegate.swift in Sources */,

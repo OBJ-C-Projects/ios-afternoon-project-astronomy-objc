@@ -22,14 +22,19 @@ class AstronomyCollectionViewController: UICollectionViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     //MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingIndicator.startAnimating()
         
         network.fetchPlanetsPhoto("") { (planet, error) in
             self.photosArray = planet
         }
+        
+        
+        
     }
 
     //MARK: - Private Methods
@@ -37,6 +42,7 @@ class AstronomyCollectionViewController: UICollectionViewController {
     private func updateViews() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
+            self.loadingIndicator.isHidden = true
         }
     }
     

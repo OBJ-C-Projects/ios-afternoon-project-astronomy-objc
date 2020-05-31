@@ -27,7 +27,10 @@ class DetailViewController: UIViewController {
     
     func updateViews() {
         dateLabel.text = "Taken on \(photo!.date)"
-        imageView.image = UIImage()
+        if let imageData = try? Data(contentsOf: photo!.imageURL.usingHTTPS!){
+            
+            imageView.image = UIImage(data: imageData)
+        }
     }
     
     //MARK: - Actions
