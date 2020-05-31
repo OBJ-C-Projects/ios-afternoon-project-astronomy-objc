@@ -17,7 +17,7 @@ NS_SWIFT_NAME(Network)
 @interface FGTNetwork : NSObject
 
 //Methods
-- (void) fetchPlanetsPhoto:(NSString *)rover completion:(void (^)(NSArray<Planet *> *photos, NSError *error))completion;
+- (void) fetchPlanetsPhoto:(NSString *)rover sol:(int)sol completion:(void (^)(NSArray<Planet *> *photos, NSError *error))completion;
 
 @end
 

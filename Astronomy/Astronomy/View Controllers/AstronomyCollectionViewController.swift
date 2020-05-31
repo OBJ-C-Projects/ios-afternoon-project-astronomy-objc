@@ -13,6 +13,11 @@ private let reuseIdentifier = "AstronomyCell"
 class AstronomyCollectionViewController: UICollectionViewController {
     
     //MARK: - Properties
+    private var sol: Int = 1000 {
+        didSet{
+            fetchData()
+        }
+    }
     private var network = Network()
     private var photosArray: Array<Planet> = [] {
         didSet{
@@ -21,19 +26,13 @@ class AstronomyCollectionViewController: UICollectionViewController {
     }
     
     //MARK: - Outlets
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     //MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadingIndicator.startAnimating()
-        
-        network.fetchPlanetsPhoto("") { (planet, error) in
-            self.photosArray = planet
-        }
-        
-        
+        loader(start: true)
+        fetchData()
         
     }
 
@@ -42,8 +41,31 @@ class AstronomyCollectionViewController: UICollectionViewController {
     private func updateViews() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
-            self.loadingIndicator.isHidden = true
+            self.loader(start: false)
         }
+    }
+    
+    func fetchData() {
+        network.fetchPlanetsPhoto("", sol: Int32(sol)) { (planet, error) in
+            self.photosArray = planet
+        }
+    }
+    
+    func loader(start activateLoader: Bool) {
+        if(activateLoader){
+            loadingIndicator.isHidden = false
+            loadingIndicator.startAnimating()
+        }else{
+            loadingIndicator.isHidden = true
+            loadingIndicator.stopAnimating()
+        }
+    }
+    
+    //MARK: - Actions
+    @IBAction func stepperPressed(_ sender: UIStepper) {
+        loadingIndicator.isHidden = false
+        self.loadingIndicator.startAnimating()
+        sol = Int(sender.value)
     }
     
     //MARK: - UICollectionViewDataSource

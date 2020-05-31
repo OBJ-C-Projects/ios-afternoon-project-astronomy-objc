@@ -14,7 +14,7 @@
 @implementation FGTNetwork
 
 
-- (void) fetchPlanetsPhoto:(NSString *)rover completion:(void (^)(NSArray<Planet *> *photos, NSError *error))completion {
+- (void) fetchPlanetsPhoto:(NSString *)rover sol:(int)sol completion:(void (^)(NSArray<Planet *> *photos, NSError *error))completion {
     
     //1.Build URL
     NSString *baseURL = @"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos";
@@ -24,10 +24,10 @@
     //Create query items
     NSURLQueryItem *key = [NSURLQueryItem queryItemWithName:@"api_key" value:keyValue];
     
-    NSURLQueryItem *sol = [NSURLQueryItem queryItemWithName:@"sol" value:@"1000"];
+    NSURLQueryItem *onSol = [NSURLQueryItem queryItemWithName:@"sol" value:[NSString stringWithFormat:@"%d",sol]];
    
     //Add query items to array
-    components.queryItems = @[sol,key];
+    components.queryItems = @[onSol,key];
     
     //Complete∫ URL
     NSURL *url = components.URL;

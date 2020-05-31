@@ -137,7 +137,16 @@
                             <outlet property="delegate" destination="pW3-Ge-dhs" id="RJe-1N-Yjz"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="3YT-fR-swZ"/>
+                    <navigationItem key="navigationItem" id="3YT-fR-swZ">
+                        <nil key="title"/>
+                        <stepper key="titleView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minimumValue="10" maximumValue="100" stepValue="10" id="hqP-Ma-1Xf">
+                            <rect key="frame" x="160" y="6" width="94" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="stepperPressed:" destination="pW3-Ge-dhs" eventType="valueChanged" id="FnF-DO-Ybf"/>
+                            </connections>
+                        </stepper>
+                    </navigationItem>
                     <connections>
                         <outlet property="loadingIndicator" destination="vce-ar-GyE" id="Vfg-e0-ReR"/>
                     </connections>
