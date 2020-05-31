@@ -10,27 +10,22 @@ import Foundation
 
 class Planet: NSObject, Decodable {
 
-    @objc let name: String
-    @objc let photo: URL
-    @objc let date: Date
-    @objc let cameraName: String
+    @objc let imageURL: URL
+    @objc let date: String
     
     
-    @objc init( name: String, photo: URL, date: Date, cameraName: String) {
-        self.name = name
-        self.photo = photo
+    @objc init(imageURL: URL, date: String) {
+        self.imageURL = imageURL
         self.date = date
-        self.cameraName = cameraName
     }
     
     
     @objc convenience init?(dictionary: [String:Any]) {
-        guard let name = dictionary["name"] as? String,
-            let photo = dictionary["photo"] as? URL,
-            let date = dictionary["date"] as? Date,
-            let cameraName = dictionary["cameraName"] as? String else {
+        guard let imageURLString = dictionary["img_src"] as? String,
+            let date = dictionary["earth_date"] as? String,
+        let imageURL = URL(string: imageURLString) else {
                 return nil
         }
-        self.init(name:name,photo:photo,date:date,cameraName:cameraName)
+        self.init(imageURL:imageURL,date:date)
     }
 }

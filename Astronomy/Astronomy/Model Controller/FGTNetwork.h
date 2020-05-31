@@ -16,12 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(Network)
 @interface FGTNetwork : NSObject
 
-//properties
-@property (nonatomic, readonly) NSArray<Planet *> *planets;
-
-
 //Methods
-- (void) fetchPlanetsData:(NSString *)rover completion:(void (^)(Planet *planet, NSError *error))completion;
+- (void) fetchPlanetsPhoto:(NSString *)rover completion:(void (^)(NSArray<Planet *> *photos, NSError *error))completion;
 
 @end
 

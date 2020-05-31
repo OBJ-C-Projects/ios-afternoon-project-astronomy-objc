@@ -13,9 +13,8 @@
 
 @implementation FGTNetwork
 
-@synthesize planets = _planets;
 
-- (void) fetchPlanetsData:(NSString *)rover completion:(void (^)(Planet *planet, NSError *error))completion{
+- (void) fetchPlanetsPhoto:(NSString *)rover completion:(void (^)(NSArray<Planet *> *photos, NSError *error))completion {
     
     //1.Build URL
     NSString *baseURL = @"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos";
@@ -47,7 +46,7 @@
             return;
         }
         
-        NSLog(@"Finished fetching data");
+        //NSLog(@"Finished fetching data");
         //JSON parsing
 //        NSString *dummyData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 //        NSLog(@"Data: %@",dummyData);
@@ -67,19 +66,20 @@
             return;
         }
         
-        NSDictionary *resultDic = json[@"photo_manifest"];
-        Planet *planet = [[Planet alloc] initWithDictionary:resultDic];
-        completion(planet,nil);
+        NSDictionary *resultArray = json[@"photos"];
+        
+        NSMutableArray *photosArray = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *dict in resultArray) {
+//            [self.photosArray addObject: [[Planet alloc] initWithDictionary: dict]];
+             [photosArray addObject: [[Planet alloc] initWithDictionary: dict]];
+        }
+      
+        completion(photosArray,nil);
         
     }]resume];
 }
 
-- (instancetype)init{
-    self = [super init];
-    if(self){
-        
-    }
-    return self;
-}
+
 
 @end

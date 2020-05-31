@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     //MARK: - Properties
-    //private var network = Network()
+    var photo: Planet?
     
     //MARK: - Outlets
     
@@ -22,12 +22,17 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //network.fetchPlanetsData()
+        updateViews()
+    }
+    
+    func updateViews() {
+        dateLabel.text = "Taken on \(photo!.date)"
+        imageView.image = UIImage()
     }
     
     //MARK: - Actions
     @IBAction func saveButtonPressed(_ sender: UIButton) {
+        print("Save button pressed!")
     }
     
 

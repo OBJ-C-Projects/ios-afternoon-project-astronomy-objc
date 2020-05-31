@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040AED182483B7CF00B1125C /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AED172483B7CF00B1125C /* PlanetCollectionViewCell.swift */; };
 		0435285D247E73CF00A55C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435285C247E73CF00A55C3F /* AppDelegate.swift */; };
 		0435285F247E73CF00A55C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435285E247E73CF00A55C3F /* SceneDelegate.swift */; };
 		04352861247E73CF00A55C3F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04352860247E73CF00A55C3F /* DetailViewController.swift */; };
@@ -15,11 +16,11 @@
 		04352869247E73D400A55C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04352867247E73D400A55C3F /* LaunchScreen.storyboard */; };
 		04352874247E8F2D00A55C3F /* AstronomyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04352873247E8F2D00A55C3F /* AstronomyCollectionViewController.swift */; };
 		04352876247EA5B600A55C3F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04352875247EA5B600A55C3F /* Planet.swift */; };
-		0435287B247EA72E00A55C3F /* FGTPlanetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435287A247EA72E00A55C3F /* FGTPlanetController.m */; };
 		0435287F247EA76D00A55C3F /* FGTNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435287E247EA76D00A55C3F /* FGTNetwork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040AED172483B7CF00B1125C /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
 		04352859247E73CF00A55C3F /* Astronomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astronomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0435285C247E73CF00A55C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0435285E247E73CF00A55C3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,8 +32,6 @@
 		04352873247E8F2D00A55C3F /* AstronomyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyCollectionViewController.swift; sourceTree = "<group>"; };
 		04352875247EA5B600A55C3F /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		04352878247EA72E00A55C3F /* Astronomy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy-Bridging-Header.h"; sourceTree = "<group>"; };
-		04352879247EA72E00A55C3F /* FGTPlanetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTPlanetController.h; sourceTree = "<group>"; };
-		0435287A247EA72E00A55C3F /* FGTPlanetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTPlanetController.m; sourceTree = "<group>"; };
 		0435287D247EA76D00A55C3F /* FGTNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTNetwork.h; sourceTree = "<group>"; };
 		0435287E247EA76D00A55C3F /* FGTNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTNetwork.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +79,9 @@
 		04352870247E74A900A55C3F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04352860247E73CF00A55C3F /* DetailViewController.swift */,
 				04352873247E8F2D00A55C3F /* AstronomyCollectionViewController.swift */,
+				04352860247E73CF00A55C3F /* DetailViewController.swift */,
+				040AED172483B7CF00B1125C /* PlanetCollectionViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -117,8 +117,6 @@
 		0435287C247EA73800A55C3F /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04352879247EA72E00A55C3F /* FGTPlanetController.h */,
-				0435287A247EA72E00A55C3F /* FGTPlanetController.m */,
 				0435287D247EA76D00A55C3F /* FGTNetwork.h */,
 				0435287E247EA76D00A55C3F /* FGTNetwork.m */,
 			);
@@ -200,10 +198,10 @@
 				04352861247E73CF00A55C3F /* DetailViewController.swift in Sources */,
 				04352874247E8F2D00A55C3F /* AstronomyCollectionViewController.swift in Sources */,
 				0435285D247E73CF00A55C3F /* AppDelegate.swift in Sources */,
+				040AED182483B7CF00B1125C /* PlanetCollectionViewCell.swift in Sources */,
 				0435287F247EA76D00A55C3F /* FGTNetwork.m in Sources */,
 				0435285F247E73CF00A55C3F /* SceneDelegate.swift in Sources */,
 				04352876247EA5B600A55C3F /* Planet.swift in Sources */,
-				0435287B247EA72E00A55C3F /* FGTPlanetController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
