@@ -32,9 +32,9 @@ class AstronomyCollectionViewController: UICollectionViewController {
         }
     }
 
-    //MARK: - Methods
+    //MARK: - Private Methods
     
-    func updateViews() {
+    private func updateViews() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
@@ -56,7 +56,7 @@ class AstronomyCollectionViewController: UICollectionViewController {
         let imgData = photosArray[indexPath.row]
         
         // Configure the cell
-        if let imageData = try? Data(contentsOf: imgData.imageURL) {
+        if let imageData = try? Data(contentsOf: imgData.imageURL.usingHTTPS!) {
             cell.imageView.image = UIImage(data: imageData)
         }
     
